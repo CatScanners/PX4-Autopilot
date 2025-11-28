@@ -9,7 +9,9 @@ R="`pwd`/"
 _set() {
 	eval $1=\"$2\"
 }
-alias set=_set
+set() {
+	_set "$@"
+}
 
 # Don't stop on errors.
 #set -e
